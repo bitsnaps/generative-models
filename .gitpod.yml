@@ -9,7 +9,11 @@ ports:
     visibility: public
 
 tasks:
-  - init: pip install .
-    command: python main.py
+  - init: |
+      python3 -m venv .pt2
+      source .pt2/bin/activate
+      pip3 install -r requirements_pt2.txt
+    command: |
+      streamlit run scripts/demo/sampling.py --server.port 8000
 
 
