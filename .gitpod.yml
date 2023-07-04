@@ -16,5 +16,6 @@ tasks:
       source .pt2/bin/activate
       pip install -r requirements_pt2.txt
       echo "if it didnt work try: pip install opencv-contrib-python"
+      echo "you can also try installing a different version: pip install opencv-python==3.4.9.31"
     command: streamlit run scripts/demo/sampling.py --server.port 8000
 
