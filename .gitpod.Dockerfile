@@ -2,6 +2,8 @@
 FROM gitpod/workspace-python
 
 RUN sudo apt-get update && \
-    && sudo apt-get install -y ffmpeg libsm6 libxext6 libgl1-mesa-glx \
-    && pyenv install 3.10.9 \
+    && sudo apt-get install -y ffmpeg libsm6 libtext6 libxext6 libgl1 libgl1-mesa-glx \
+    && sudo apt-get install -y python3-opencv
+
+RUN pyenv install 3.10.9 \
     && pyenv global 3.10.9
